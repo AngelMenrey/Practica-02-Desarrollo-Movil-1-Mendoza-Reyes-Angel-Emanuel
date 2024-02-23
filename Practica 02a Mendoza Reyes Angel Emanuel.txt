@@ -1,0 +1,49 @@
+fun main() {
+    
+    val cita = Cita()
+
+    println("\nValores iniciales de la cita:")
+    println("Fecha: ${cita.fecha}")
+    println("Hora: ${cita.hora}")
+    println("Lugar: ${cita.lugar}")
+
+    val citaNum1 = Cita("22/02/2024", "07:00 AM", "D:LS")
+    val citaNum2 = Cita("21/02/2024", "10:20 AM", "L:205")
+    val citaNum3 = Cita("20/02/2024", "11:10 AM", "F:102")
+
+    println("\nValores asignados de la cita:")
+    println("Fecha: ${citaNum1.fecha}")
+    println("Hora: ${citaNum1.hora}")
+    println("Lugar: ${citaNum1.lugar}")
+
+    println("\nFecha: ${citaNum2.fecha}")
+    println("Hora: ${citaNum2.hora}")
+    println("Lugar: ${citaNum2.lugar}")
+
+    println("\nFecha: ${citaNum3.fecha}")
+    println("Hora: ${citaNum3.hora}")
+    println("Lugar: ${citaNum3.lugar}")
+}
+ class Cita {
+    var fecha: String = "Fecha por defecto"
+        get() = field
+        set(value) {
+            field = value
+        }
+    var hora: String = "Hora por defecto"
+        get() = field
+        set(value) {
+            field = value
+        }
+    var lugar: String = "Lugar por defecto"
+        get() = field
+        set(value) {
+            field = value
+        }
+    constructor()
+    constructor(fecha: String, hora: String, lugar: String) {
+        this.fecha = fecha
+        this.hora = hora
+        this.lugar = lugar
+    }
+}

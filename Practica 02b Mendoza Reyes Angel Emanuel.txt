@@ -1,0 +1,96 @@
+fun main() {
+    val herramienta = Herramienta()
+    println("Valor inicial Herramienta:")
+    println("Herramienta:")
+    println("Marca: ${herramienta.marca}")
+    println("Modelo: ${herramienta.modelo}")
+    println("Código: ${herramienta.codigo}")
+    println("Costo: ${herramienta.costo}")
+   
+   	val herramientaMecanica = HerramientaMecanica()
+    println("Herramienta Mecánica:")
+   	println("Peso: ${herramientaMecanica.peso}")
+    println("Tamaño: ${herramientaMecanica.tamaño}")
+    println("Dimensiones: ${herramientaMecanica.dimensiones}")
+    
+    val herramientaNum1 = Herramienta()
+    val herramientaNum2 = Herramienta()
+    val herramientaNum3 = Herramienta()
+	
+    herramientaNum1.marca = "DeWalt"
+    herramientaNum1.modelo = "Modelo 123"
+    herramientaNum1.codigo = "67890"
+    herramientaNum1.costo = 149.99
+
+    herramientaNum2.marca = "Makita"
+    herramientaNum2.modelo = "Modelo 456"
+    herramientaNum2.codigo = "ABCDE"
+    herramientaNum2.costo = 199.99
+
+    herramientaNum3.marca = "Stanley"
+    herramientaNum3.modelo = "Modelo 789"
+    herramientaNum3.codigo = "FGHIJ"
+    herramientaNum3.costo = 99.99
+
+    println("Valores actualizados de Herramientas:")
+    println("HerramientaNum1:")
+    println("Marca: ${herramientaNum1.marca}")
+    println("Modelo: ${herramientaNum1.modelo}")
+    println("Código: ${herramientaNum1.codigo}")
+    println("Costo: ${herramientaNum1.costo}")
+
+    println("HerramientaNum2:")
+    println("Marca: ${herramientaNum2.marca}")
+    println("Modelo: ${herramientaNum2.modelo}")
+    println("Código: ${herramientaNum2.codigo}")
+    println("Costo: ${herramientaNum2.costo}")
+
+    println("HerramientaNum3:")
+    println("Marca: ${herramientaNum3.marca}")
+    println("Modelo: ${herramientaNum3.modelo}")
+    println("Código: ${herramientaNum3.codigo}")
+    println("Costo: ${herramientaNum3.costo}")
+
+    val herramientaMecanicaNum1 = HerramientaMecanica()
+    val herramientaMecanicaNum2 = HerramientaMecanica()
+    val herramientaMecanicaNum3 = HerramientaMecanica()
+
+    herramientaMecanicaNum1.peso = 10.5
+    herramientaMecanicaNum1.tamaño = "Mediano"
+    herramientaMecanicaNum1.dimensiones = "15x8x4 cm"
+
+    herramientaMecanicaNum2.peso = 7.8
+    herramientaMecanicaNum2.tamaño = "Pequeño"
+    herramientaMecanicaNum2.dimensiones = "10x6x3 cm"
+
+    herramientaMecanicaNum3.peso = 15.2
+    herramientaMecanicaNum3.tamaño = "Grande"
+    herramientaMecanicaNum3.dimensiones = "20x12x6 cm"
+
+    println("Valores actualizados de Herramientas Mecanicas:")
+    println("HerramientaMecánicaNum1:")
+    println("Peso: ${herramientaMecanicaNum1.peso}")
+    println("Tamaño: ${herramientaMecanicaNum1.tamaño}")
+    println("Dimensiones: ${herramientaMecanicaNum1.dimensiones}")
+
+    println("HerramientaMecánicaNum2:")
+    println("Peso: ${herramientaMecanicaNum2.peso}")
+    println("Tamaño: ${herramientaMecanicaNum2.tamaño}")
+    println("Dimensiones: ${herramientaMecanicaNum2.dimensiones}")
+
+    println("HerramientaMecánicaNum3:")
+    println("Peso: ${herramientaMecanicaNum3.peso}")
+    println("Tamaño: ${herramientaMecanicaNum3.tamaño}")
+    println("Dimensiones: ${herramientaMecanicaNum3.dimensiones}")
+}
+open class Herramienta(
+    var marca: String = "Marca por defecto",
+    var modelo: String = "Modelo por defecto",
+    var codigo: String = "Código por defecto",
+    var costo: Double = 0.0
+)
+class HerramientaMecanica(
+    var peso: Double = 0.0,
+    var tamaño: String = "Tamaño por defecto",
+    var dimensiones: String = "Dimensiones por defecto"
+) : Herramienta()
